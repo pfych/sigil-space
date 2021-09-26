@@ -1,0 +1,36 @@
+@use './indigo';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+h1 {
+  @include indigo.header1();
+}
+
+h2 {
+  @include indigo.header2();
+}
+
+h3 {
+  @include indigo.header3();
+}
+
+p {
+  @include indigo.text();
+}
+
+button {
+  &:not(.negative):not(.positive) {
+    @include indigo.button();
+  }
+
+  &.negative {
+    @include indigo.badButton();
+  }
+
+  &.positive {
+    @include indigo.goodButton();
+  }
+}
+
+input {
+  @include indigo.input();
+}

@@ -1,0 +1,9 @@
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 30ch;
+
+  input {
+    margin-bottom: 1em;
+  }
+}

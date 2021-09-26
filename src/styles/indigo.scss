@@ -1,0 +1,116 @@
+@mixin typography() {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  letter-spacing: -0.011em;
+}
+
+@mixin header() {
+  @include typography();
+
+  font-weight: 600;
+}
+
+@mixin header1() {
+  @include header();
+
+  font-size: 32px;
+  line-height: 48px;
+}
+
+@mixin header2() {
+  @include header();
+
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin header3() {
+  @include header();
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text() {
+  @include typography();
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin footnote() {
+  @include typography();
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin button() {
+  @include text();
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  border: unset;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: #000;
+  justify-content: center;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin goodButton() {
+  @include button();
+
+  background: #219DFF;
+  color: #fff;
+
+  &:disabled {
+    background: rgba(33, 157, 255, 0.05);
+    color: rgba(33, 157, 255, 0.3);
+  }
+}
+
+@mixin badButton() {
+  @include button();
+
+  background: #FF4136;
+  color: #fff;
+
+  &:disabled {
+    background: rgba(255, 65, 54, 0.05);
+    color: rgba(255, 65, 54, 0.3);
+  }
+}
+
+@mixin input() {
+  @include text();
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  &::placeholder {
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
