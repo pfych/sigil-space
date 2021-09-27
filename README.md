@@ -18,4 +18,4 @@ urbit -F zod
 ~zod:dojo> |pass [%e [%approve-origin 'http://localhost:3000']]
 ```
 ---
-**Urbit:** `~bicmed-fiprut-hansug-forruc--tanmex-lodlyd-pactul-wanzod` (I dont own a planet yet)
+**Urbit:** `~sipfer-tasmug-barlyx-dinfes--waclup-tinrus-rabreb-samzod` (I dont own a planet yet)
